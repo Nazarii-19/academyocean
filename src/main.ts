@@ -6,6 +6,12 @@ import './styles/style.scss'
 
 Vue.config.productionTip = false
 
+Vue.component('Icon', () => import('~/ui/icons/Icon.vue'))
+Vue.component(
+  'IconLogoWithText',
+  () => import('~/ui/icons/IconLogoWithText.vue')
+)
+
 new Vue({
   store,
   router,

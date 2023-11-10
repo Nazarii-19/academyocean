@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "_mixins";
+@import "_variables";
 
 @layer base {
   html {
     font-family: "Roboto", system-ui, sans-serif;
   }
 }
+
 // ===================================================================
 * {
   outline: none;
@@ -21,12 +25,8 @@ body {
   overflow-x: hidden;
   letter-spacing: -0.022em;
   min-height: 100vh;
-  //display: flex;
-  //flex-direction: column;
-  //
-  //main {
-  //  flex: 1;
-  //}
 }
 
 // ===================================================================
+@import "_text";
+@import "_ui";

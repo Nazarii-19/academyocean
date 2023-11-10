@@ -1,0 +1,58 @@
+// ====================================================================================
+// Colors
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --black-opacity: rgba(0, 0, 0, 0.8);
+  --white: rgba(255, 255, 255, 1);
+  --white-opacity: rgba(255, 255, 255, 0.8);
+  --primary: rgba(255, 149, 0, 1);
+  --blue: rgba(65, 117, 219, 1);
+  --red: rgba(235, 78, 62, 1);
+  --grey-50: rgba(24, 24, 27, 1);
+  --grey-100: rgba(39, 39, 42, 1);
+  --grey-200: rgba(63, 63, 70, 1);
+  --grey-300: rgba(82, 82, 91, 1);
+  --grey-400: rgba(113, 113, 122, 1);
+  --grey-500: rgba(161, 161, 170, 1);
+  --grey-600: rgba(212, 212, 216, 1);
+  --grey-700: rgba(228, 228, 231, 1);
+  --grey-800: rgba(244, 244, 245, 1);
+  --grey-900: rgba(250, 250, 250, 1);
+}
+
+// ====================================================================================
+// Transitions
+:root {
+  --transition-low: 0.2s;
+  --transition: 0.3s;
+}
+
+// ====================================================================================
+// Border radius
+:root {
+  --border-radius-low: 0.25rem;
+  --border-radius: 0.5rem;
+  --border-radius-medium: 0.75rem;
+  --border-radius-big: 1.25rem;
+  --border-radius-infinity: 999rem;
+}
+
+// ====================================================================================
+// Z-index
+:root {
+  --z-index-popup: 200;
+  --z-index-modal: 190;
+  --z-index-header: 100;
+  --z-index-high: 20;
+  --z-index-medium: 10;
+  --z-index-low: 5;
+  --z-index-one: 1;
+  --z-index-minus: -1;
+}
+
+// ====================================================================================
+// Other
+:root {
+  --field-height: 2.25rem;
+  --field-height-small: 1.5rem;
+}
