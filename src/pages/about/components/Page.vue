@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Auth</h1>
+  <div class="page page__gradient container">
+    <h1>About</h1>
   </div>
 </template>
 
@@ -8,8 +8,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Auth'
+  name: 'About'
 })
 </script>
-
-<style scoped lang="scss"></style>

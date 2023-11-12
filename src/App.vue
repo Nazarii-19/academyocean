@@ -2,9 +2,7 @@
   <main class="flex flex-col min-h-screen">
     <Header />
 
-    <div class="flex-1">
-      <router-view />
-    </div>
+    <RouterView />
 
     <Footer />
   </main>
@@ -13,9 +11,11 @@
 <script>
 import { defineComponent } from 'vue'
 import { mapMutations } from 'vuex'
-import Header from '~/modules/header/components/Header.vue'
-import Footer from '~/modules/footer/components/Footer.vue'
+import { Header } from '~/modules/header'
+import { Footer } from '~/modules/footer'
 import adaptiveHelper from '~/helpers/adaptiveHelper'
+import { UserKeyInStorage } from '~/modules/user'
+import { getFromStorage } from '~/helpers/storageHelper'
 
 export default defineComponent({
   name: 'App',
@@ -25,9 +25,13 @@ export default defineComponent({
   },
   mounted() {
     adaptiveHelper(this.SET_MOBILE)
+
+    const user = getFromStorage(UserKeyInStorage)
+    if (user) this.SET_USER(user)
   },
   methods: {
-    ...mapMutations('adaptive', ['SET_MOBILE'])
+    ...mapMutations('adaptive', ['SET_MOBILE']),
+    ...mapMutations('user', ['SET_USER'])
   }
 })
 </script>

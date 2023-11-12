@@ -59,18 +59,12 @@ img, video {
 }
 
 // ===================================================================
-.img-hover {
-  overflow: hidden;
+.page {
+  flex: 1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
-  img {
-    transition: var(--transition);
-  }
-
-  @include isHover {
-    &:hover {
-      img {
-        scale: 1.05;
-      }
-    }
+  &__gradient {
+    background: #d4f1ff linear-gradient(to top, #ebd4ff, #d4f1ff);
   }
 }

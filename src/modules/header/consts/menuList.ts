@@ -1,5 +1,5 @@
-import MenuItem from '../types/MenuItemType.ts'
 import RouterEnum from '~/enums/RouterEnum.ts'
+import MenuItem from '../types/MenuItemType.ts'
 
 const menuList: MenuItem[] = [
   {
@@ -7,12 +7,8 @@ const menuList: MenuItem[] = [
     link: RouterEnum.Home
   },
   {
-    title: 'Авторизація',
-    link: RouterEnum.Auth
-  },
-  {
-    title: 'Курси',
-    link: RouterEnum.Course
+    title: 'Про нас',
+    link: RouterEnum.About
   }
 ]
 

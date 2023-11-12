@@ -10,15 +10,19 @@
         {{ link.title }}
       </span>
     </RouterLink>
+
+    <HeaderUser />
   </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { HeaderUser } from '~/modules/user'
 import menuList from '../consts/menuList'
 
 export default defineComponent({
   name: 'MenuList',
+  components: { HeaderUser },
   props: {
     isOpen: {
       type: Boolean,

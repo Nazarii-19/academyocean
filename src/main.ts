@@ -11,6 +11,9 @@ Vue.component(
   'IconLogoWithText',
   () => import('~/ui/icons/IconLogoWithText.vue')
 )
+Vue.component('Card', () => import('~/ui/card/Card.vue'))
+Vue.component('Input', () => import('~/ui/input/Input.vue'))
+Vue.component('Button', () => import('~/ui/button/Button.vue'))
 
 new Vue({
   store,
