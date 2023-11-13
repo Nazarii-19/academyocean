@@ -1,7 +1,7 @@
 import { getFromStorage, setToStorage } from '~/helpers/storageHelper.ts'
 import { courseCardList } from '~/pages/home'
-import { CourseKeyInStorage } from '../consts/courseKeyInStorage.ts'
-import { CourseCard, CourseInStorage } from '../types/CourseCardType.ts'
+import { CourseKeyInStorage } from '~/pages/home'
+import { CourseCard, CourseInStorage } from '~/pages/home'
 
 interface State {
   courseCardList: CourseCard[]
@@ -29,7 +29,8 @@ const actions = {
   saveCoursesInStorage(_, courses: CourseCard[]) {
     const coursesForStorage = courses.map(course => ({
       id: course.id,
-      completionPercentage: course.completionPercentage
+      completionPercentage: course.completionPercentage,
+      activeLessonId: ''
     }))
 
     setToStorage(CourseKeyInStorage, coursesForStorage)

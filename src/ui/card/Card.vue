@@ -3,6 +3,7 @@
     :is="as"
     v-bind="$attrs"
     class="card"
+    :class="{ 'p-4': padding }"
     :style="{ width: `min(100%, ${maxWidth})` }"
   >
     <slot />
@@ -23,6 +24,10 @@ export default defineComponent({
     maxWidth: {
       type: String,
       default: '100%'
+    },
+    padding: {
+      type: Boolean,
+      default: true
     }
   }
 })
@@ -36,6 +41,5 @@ export default defineComponent({
 
   background: var(--white);
   border-radius: var(--border-radius-big);
-  padding: 1rem;
 }
 </style>

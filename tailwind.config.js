@@ -30,6 +30,7 @@ module.exports = {
       white: 'var(--white)',
       'white-opacity': 'var(--white-opacity)',
       primary: 'var(--primary)',
+      'primary-hover': 'var(--primary-hover)',
       blue: 'var(--blue)',
       red: 'var(--red)',
       'grey-50': 'var(--grey-50)',

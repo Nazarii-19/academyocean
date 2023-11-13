@@ -1,6 +1,6 @@
 <template>
-  <div class="page page__gradient container">
-    <h1>About</h1>
+  <div class="page page__gradient">
+    <h1>Результат</h1>
   </div>
 </template>
 
@@ -8,6 +8,8 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'About'
+  name: 'CourseResult'
 })
 </script>
+
+<style scoped lang="scss"></style>

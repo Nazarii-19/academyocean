@@ -53,6 +53,7 @@ export default defineComponent({
 
 .button {
   @include flex-center;
+  gap: 0.5rem;
   height: var(--field-height);
   width: fit-content;
 
@@ -62,6 +63,7 @@ export default defineComponent({
     background var(--transition),
     scale var(--transition),
     filter var(--transition);
+  white-space: nowrap;
 
   &:not(:disabled):active {
     scale: 0.95;
@@ -74,10 +76,10 @@ export default defineComponent({
 
   &__primary {
     background: var(--primary);
-    color: var(--grey-100);
+    color: var(--white);
 
     &:hover {
-      filter: brightness(1.1);
+      background: var(--primary-hover);
     }
   }
 

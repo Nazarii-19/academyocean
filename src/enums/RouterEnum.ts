@@ -2,7 +2,7 @@ enum RouterEnum {
   Home = '/',
   Auth = '/auth',
   Course = '/course',
-  About = '/about'
+  CourseResult = '/course-result'
 }
 
 export default RouterEnum

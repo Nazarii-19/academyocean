@@ -17,7 +17,9 @@ import { Icons } from '~/types/IconType.ts'
 export default defineComponent({
   name: 'Icon',
   components: {
-    Logo: () => import('~/ui/icons/IconLogo.vue')
+    Logo: () => import('~/ui/icons/IconLogo.vue'),
+    Check: () => import('~/ui/icons/IconCheck.vue'),
+    ArrowInCircle: () => import('~/ui/icons/IconArrowInCircle.vue')
   },
   props: {
     name: {

@@ -1,1 +1,1 @@
-export type Icons = 'Logo'
+export type Icons = 'Logo' | 'Check' | 'ArrowInCircle'

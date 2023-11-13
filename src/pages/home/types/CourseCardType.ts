@@ -6,4 +6,7 @@ export interface CourseCard {
   completionPercentage: number
 }
 
-export type CourseInStorage = Pick<CourseCard, 'id' | 'completionPercentage'>
+export type CourseInStorage = Pick<
+  CourseCard,
+  'id' | 'completionPercentage'
+> & { activeLessonId: string }

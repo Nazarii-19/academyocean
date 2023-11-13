@@ -3,7 +3,11 @@
     <div class="completion-percentage">
       <span :style="{ width: completionPercentage + '%' }" />
     </div>
-    <span v-if="showLabel" class="span text-grey-700">
+    <span
+      v-if="showLabel"
+      class="span"
+      :class="[darkLabel ? 'text-grey-100' : 'text-grey-700']"
+    >
       Пройдено на {{ completionPercentage }}%
     </span>
   </div>
@@ -16,6 +20,10 @@ export default defineComponent({
   name: 'ProgressBar',
   props: {
     showLabel: {
+      type: Boolean,
+      default: false
+    },
+    darkLabel: {
       type: Boolean,
       default: false
     },

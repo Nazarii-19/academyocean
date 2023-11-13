@@ -38,6 +38,9 @@ export default defineComponent({
   mounted() {
     this.initCourseCardList()
   },
+  destroyed() {
+    this.$store.unregisterModule('courses')
+  },
   methods: {
     ...mapActions('courses', ['initCourseCardList'])
   }

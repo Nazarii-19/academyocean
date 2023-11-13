@@ -7,8 +7,8 @@ const menuList: MenuItem[] = [
     link: RouterEnum.Home
   },
   {
-    title: 'Про нас',
-    link: RouterEnum.About
+    title: 'Результати проходження',
+    link: RouterEnum.CourseResult
   }
 ]
 
