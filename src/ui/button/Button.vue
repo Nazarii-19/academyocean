@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :type="type" :disabled="disabled" @click="onClick">
+  <button :class="getClass" :type="type" :disabled="disabled" @click="onClick">
     <slot />
   </button>
 </template>
@@ -19,6 +19,20 @@ export default defineComponent({
     disabled: {
       type: Boolean,
       default: false
+    },
+    background: {
+      type: String,
+      default: 'primary',
+      validator: (value: string) => ['primary', 'secondary'].includes(value)
+    }
+  },
+  computed: {
+    getClass() {
+      return [
+        'button',
+        this.background === 'primary' && 'button__primary',
+        this.background === 'secondary' && 'button__secondary'
+      ]
     }
   },
   methods: {
@@ -42,17 +56,12 @@ export default defineComponent({
   height: var(--field-height);
   width: fit-content;
 
-  background: var(--grey-100);
-  color: var(--white);
   padding: 0 2rem;
   border-radius: var(--border-radius);
   transition:
     background var(--transition),
-    scale var(--transition);
-
-  &:hover {
-    background: var(--grey-50);
-  }
+    scale var(--transition),
+    filter var(--transition);
 
   &:not(:disabled):active {
     scale: 0.95;
@@ -61,6 +70,24 @@ export default defineComponent({
   &:disabled {
     cursor: not-allowed;
     opacity: 0.6;
+  }
+
+  &__primary {
+    background: var(--primary);
+    color: var(--grey-100);
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  &__secondary {
+    background: var(--grey-100);
+    color: var(--white);
+
+    &:hover {
+      background: var(--grey-50);
+    }
   }
 }
 </style>

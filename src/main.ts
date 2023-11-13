@@ -14,6 +14,7 @@ Vue.component(
 Vue.component('Card', () => import('~/ui/card/Card.vue'))
 Vue.component('Input', () => import('~/ui/input/Input.vue'))
 Vue.component('Button', () => import('~/ui/button/Button.vue'))
+Vue.component('ProgressBar', () => import('~/ui/progress-bar/ProgressBar.vue'))
 
 new Vue({
   store,

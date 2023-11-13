@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import RouterEnum from '~/enums/RouterEnum.ts'
-import Home from '~/pages/home/Page.vue'
+import { Home } from '~/pages/home'
 import { Auth } from '~/pages/auth'
 import { About } from '~/pages/about'
 import NotFound from '~/pages/not-found/NotFound.vue'

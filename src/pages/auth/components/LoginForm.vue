@@ -8,7 +8,9 @@
       type="password"
     />
 
-    <Button type="submit" class="mx-auto mt-4">Підтвердити</Button>
+    <Button type="submit" background="secondary" class="mx-auto mt-4">
+      Підтвердити
+    </Button>
   </form>
 </template>
 

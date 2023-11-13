@@ -68,3 +68,28 @@ img, video {
     background: #d4f1ff linear-gradient(to top, #ebd4ff, #d4f1ff);
   }
 }
+
+// ===================================================================
+.img-hover {
+  overflow: hidden;
+
+  img {
+    transition: var(--transition);
+  }
+
+  @include isHover {
+    &:hover {
+      img {
+        scale: 1.05;
+      }
+    }
+  }
+}
+
+.ibg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
