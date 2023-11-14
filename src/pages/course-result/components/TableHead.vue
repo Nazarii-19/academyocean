@@ -17,17 +17,25 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.table__head {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  background: var(--white);
-  border-bottom: 1px solid var(--grey-500);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+@import '~/styles/mixins';
 
-  p {
-    padding: 0.5rem 0;
-    text-align: center;
-    font-weight: 700;
+.table__head {
+  display: none;
+}
+
+@include tablet {
+  .table__head {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    background: var(--white);
+    border-bottom: 1px solid var(--grey-500);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+    p {
+      padding: 0.5rem 0;
+      text-align: center;
+      font-weight: 700;
+    }
   }
 }
 </style>

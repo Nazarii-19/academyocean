@@ -1,7 +1,7 @@
 <template>
   <div v-if="getUser" class="user" role="button" @click="logout">
     <img :src="getUser.avatar" alt="avatar" />
-    <span>{{ getUser.name.first }} {{ getUser.name.last }}</span>
+    <span>{{ getUser.name.first }} {{ getUser.name.last }} (Вихід)</span>
   </div>
 </template>
 

@@ -1,10 +1,25 @@
 <template>
   <div class="table__row">
-    <p>{{ title }}</p>
-    <p>{{ getDuration }}</p>
-    <p>{{ attempts }}</p>
-    <p>{{ getLastAttemptDate }}</p>
-    <p>{{ completionPercentage }}%</p>
+    <div class="table__row-item">
+      <p class="font-bold md:hidden">Назва</p>
+      <p>{{ title }}</p>
+    </div>
+    <div class="table__row-item">
+      <p class="font-bold md:hidden">Час проходження</p>
+      <p>{{ getDuration }}</p>
+    </div>
+    <div class="table__row-item">
+      <p class="font-bold md:hidden">Кількість спроб</p>
+      <p>{{ attempts }}</p>
+    </div>
+    <div class="table__row-item">
+      <p class="font-bold md:hidden">Дата останньої спроби</p>
+      <p>{{ getLastAttemptDate }}</p>
+    </div>
+    <div class="table__row-item">
+      <p class="font-bold md:hidden">Пройдено, %</p>
+      <p>{{ completionPercentage }}%</p>
+    </div>
   </div>
 </template>
 
@@ -53,16 +68,36 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@import '~/styles/mixins';
+
 .table__row {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
   border-bottom: 1px solid var(--grey-700);
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   text-align: center;
   background: var(--white);
+  border-radius: var(--border-radius);
+  margin-top: 0.75rem;
 
-  &:last-child {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  &-item {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@include tablet {
+  .table__row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-top: 0;
+    border-radius: 0;
+
+    &:last-child {
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+
+    &-item {
+      justify-content: center;
+    }
   }
 }
 </style>

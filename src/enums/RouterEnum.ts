@@ -1,8 +1,8 @@
 enum RouterEnum {
-  Home = '/academyocean',
-  Auth = '/academyocean/auth',
-  Course = '/academyocean/course',
-  CourseResult = '/academyocean/course-result'
+  Home = '/',
+  Auth = '/auth',
+  Course = '/course',
+  CourseResult = '/course-result'
 }
 
 export default RouterEnum

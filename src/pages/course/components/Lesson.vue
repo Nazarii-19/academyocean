@@ -4,7 +4,10 @@
       <div v-html="xssDeffHelper(getCurrentLesson.content)" />
     </div>
 
-    <div class="mt-4 flex justify-end">
+    <div class="mt-4 flex justify-between">
+      <RouterLink :to="RouterEnum.Home">
+        <Button background="secondary">Назад</Button>
+      </RouterLink>
       <Button @click="onToNextLesson">
         {{ nextLesson ? 'Наступний урок' : 'Завершити' }}
         <Icon name="ArrowInCircle" size="14" />
@@ -21,6 +24,9 @@ import { xssDeffHelper } from '~/helpers/xssDeffHelper'
 
 export default defineComponent({
   name: 'Lesson',
+  data() {
+    return { RouterEnum }
+  },
   computed: {
     ...mapGetters('course', ['getCourse']),
     getCurrentLesson() {
@@ -60,5 +66,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped lang="scss"></style>
