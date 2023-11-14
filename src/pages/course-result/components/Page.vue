@@ -1,12 +1,14 @@
 <template>
-  <div class="page page__gradient container">
-    <h1 class="h1 text-center font-bold">Результати</h1>
+  <div class="page">
+    <div class="container">
+      <h1 class="h1 text-center font-bold">Результати</h1>
 
-    <Table />
+      <Table />
 
-    <RouterLink :to="RouterEnum.Home" class="mt-8 inline-block">
-      <Button background="secondary">Назад</Button>
-    </RouterLink>
+      <RouterLink :to="RouterEnum.Home" class="mt-8 inline-block">
+        <Button background="secondary">Назад</Button>
+      </RouterLink>
+    </div>
   </div>
 </template>
 

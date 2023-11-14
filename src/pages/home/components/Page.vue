@@ -1,22 +1,24 @@
 <template>
-  <div class="page page__gradient container">
-    <h1 class="h1 text-center font-bold">Оберіть курс</h1>
+  <div class="page">
+    <div class="container">
+      <h1 class="h1 text-center font-bold">Оберіть курс</h1>
 
-    <div
-      v-if="getCourseCardList.length"
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
-    >
-      <CourseCard
-        v-for="courseCard in getCourseCardList"
-        :id="courseCard.id"
-        :key="courseCard.id"
-        :title="courseCard.title"
-        :description="courseCard.description"
-        :image="courseCard.image"
-        :completion-percentage="courseCard.completionPercentage"
-      />
+      <div
+        v-if="getCourseCardList.length"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
+      >
+        <CourseCard
+          v-for="courseCard in getCourseCardList"
+          :id="courseCard.id"
+          :key="courseCard.id"
+          :title="courseCard.title"
+          :description="courseCard.description"
+          :image="courseCard.image"
+          :completion-percentage="courseCard.completionPercentage"
+        />
+      </div>
+      <p v-else class="text-center mt-8">Курсів не знайдено</p>
     </div>
-    <p v-else class="text-center mt-8">Курсів не знайдено</p>
   </div>
 </template>
 

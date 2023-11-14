@@ -1,16 +1,18 @@
 <template>
-  <div class="page page__gradient container">
-    <Card v-if="getCourse" :padding="false">
-      <div class="course__card">
-        <LessonList />
-        <Lesson />
+  <div class="page">
+    <div class="container">
+      <Card v-if="getCourse" :padding="false">
+        <div class="course__card">
+          <LessonList />
+          <Lesson />
+        </div>
+      </Card>
+      <div v-else class="flex items-center flex-col">
+        <h4 class="h4 font-bold">Курс не знайдено</h4>
+        <Button class="mt-4">
+          <RouterLink :to="RouterEnum.Home">На головну</RouterLink>
+        </Button>
       </div>
-    </Card>
-    <div v-else class="flex items-center flex-col">
-      <h4 class="h4 font-bold">Курс не знайдено</h4>
-      <Button class="mt-4">
-        <RouterLink :to="RouterEnum.Home">На головну</RouterLink>
-      </Button>
     </div>
   </div>
 </template>
