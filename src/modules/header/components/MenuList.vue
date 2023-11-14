@@ -63,7 +63,7 @@ export default defineComponent({
   }
 
   &__link {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--white);
 
     &:first-child {
