@@ -27,10 +27,15 @@ const actions = {
     commit('SET_COURSER_CARD_LIST', courseList)
   },
   saveCoursesInStorage(_, courses: CourseCard[]) {
-    const coursesForStorage = courses.map(course => ({
+    const coursesForStorage: CourseInStorage[] = courses.map(course => ({
       id: course.id,
       completionPercentage: course.completionPercentage,
-      activeLessonId: ''
+      activeLessonId: '',
+      duration: {
+        lastTime: '',
+        totalS: 0
+      },
+      attempts: 0
     }))
 
     setToStorage(CourseKeyInStorage, coursesForStorage)

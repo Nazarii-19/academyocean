@@ -11,3 +11,8 @@ export interface Course extends CourseCard {
   activeLessonId: string
   lessons: Lesson[]
 }
+
+export interface Duration {
+  lastTime: string
+  totalS: number
+}

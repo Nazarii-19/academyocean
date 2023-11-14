@@ -35,7 +35,7 @@ export default defineComponent({
     }
   },
   methods: {
-    ...mapActions('course', ['saveCompletionPercentage']),
+    ...mapActions('course', ['saveCompletionPercentage', 'saveDuration']),
     ...mapMutations('course', [
       'SET_ACTIVE_LESSON_ID',
       'SET_IS_COMPLETED_LESSON'
@@ -48,8 +48,10 @@ export default defineComponent({
       if (nextLesson) {
         this.SET_ACTIVE_LESSON_ID(nextLesson.id)
         this.saveCompletionPercentage()
+        this.saveDuration()
       } else {
         this.saveCompletionPercentage()
+        this.saveDuration()
         location.href = RouterEnum.Home
       }
     }

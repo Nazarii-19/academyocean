@@ -1,3 +1,5 @@
+import { Duration } from '~/pages/course'
+
 export interface CourseCard {
   id: string
   title: string
@@ -9,4 +11,8 @@ export interface CourseCard {
 export type CourseInStorage = Pick<
   CourseCard,
   'id' | 'completionPercentage'
-> & { activeLessonId: string }
+> & {
+  activeLessonId: string
+  duration: Duration
+  attempts: number
+}

@@ -1,7 +1,8 @@
 import { LoginForm } from '~/pages/auth'
-import { setToStorage } from '~/helpers/storageHelper.ts'
+import { removeFromStorage, setToStorage } from '~/helpers/storageHelper.ts'
 import RouterEnum from '~/enums/RouterEnum.ts'
 import { UserKeyInStorage } from '~/modules/user'
+import { CourseKeyInStorage } from '~/pages/home'
 import User from '../types/UserType.ts'
 
 interface State {
@@ -35,7 +36,8 @@ const actions = {
   },
   logout({ commit }) {
     commit('SET_USER', null)
-    setToStorage(UserKeyInStorage, null)
+    removeFromStorage(UserKeyInStorage)
+    removeFromStorage(CourseKeyInStorage)
     location.href = RouterEnum.Auth
   }
 }
