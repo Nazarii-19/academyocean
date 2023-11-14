@@ -16,5 +16,6 @@ export default defineConfig({
       '~/types': '/src/types',
       '~/ui': '/src/ui'
     }
-  }
+  },
+  base: '/academyocean/'
 })
