@@ -7,9 +7,8 @@ import './styles/style.scss'
 Vue.config.productionTip = false
 
 Vue.component('Icon', () => import('~/ui/icons/Icon.vue'))
-Vue.component(
-  'IconLogoWithText',
-  () => import('~/ui/icons/IconLogoWithText.vue')
+Vue.component('IconLogoWithText', () =>
+  import('~/ui/icons/IconLogoWithText.vue')
 )
 Vue.component('Card', () => import('~/ui/card/Card.vue'))
 Vue.component('Input', () => import('~/ui/input/Input.vue'))
