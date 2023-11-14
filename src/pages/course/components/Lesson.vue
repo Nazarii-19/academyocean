@@ -1,7 +1,7 @@
 <template>
   <div class="p-4 flex flex-col">
     <div class="flex-1">
-      <div v-html="getCurrentLesson.content" />
+      <div v-html="xssDeffHelper(getCurrentLesson.content)" />
     </div>
 
     <div class="mt-4 flex justify-end">
@@ -17,6 +17,7 @@
 import { defineComponent } from 'vue'
 import { mapActions, mapGetters, mapMutations } from 'vuex'
 import RouterEnum from '~/enums/RouterEnum'
+import { xssDeffHelper } from '~/helpers/xssDeffHelper'
 
 export default defineComponent({
   name: 'Lesson',
@@ -35,6 +36,7 @@ export default defineComponent({
     }
   },
   methods: {
+    xssDeffHelper,
     ...mapActions('course', ['saveCompletionPercentage', 'saveDuration']),
     ...mapMutations('course', [
       'SET_ACTIVE_LESSON_ID',

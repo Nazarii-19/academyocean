@@ -3,6 +3,7 @@ import { removeFromStorage, setToStorage } from '~/helpers/storageHelper.ts'
 import RouterEnum from '~/enums/RouterEnum.ts'
 import { UserKeyInStorage } from '~/modules/user'
 import { CourseKeyInStorage } from '~/pages/home'
+import { xssDeffHelper } from '~/helpers/xssDeffHelper.ts'
 import User from '../types/UserType.ts'
 
 interface State {
@@ -21,7 +22,7 @@ const actions = {
   login({ commit }, loginForm: LoginForm) {
     const newUser: User = {
       id: new Date().getTime().toString(),
-      email: loginForm.email,
+      email: xssDeffHelper(loginForm.email),
       name: {
         first: 'Maria',
         last: 'Norton'

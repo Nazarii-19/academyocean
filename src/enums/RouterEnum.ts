@@ -1,5 +1,5 @@
 enum RouterEnum {
-  Home = '/academyocean/',
+  Home = '/academyocean',
   Auth = '/academyocean/auth',
   Course = '/academyocean/course',
   CourseResult = '/academyocean/course-result'

@@ -17,5 +17,5 @@ export default defineConfig({
       '~/ui': '/src/ui'
     }
   },
-  base: '/academyocean/'
+  base: '/academyocean'
 })
